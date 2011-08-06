@@ -57,8 +57,8 @@ platforms :ruby_18, :jruby do
   gem 'radius', :group => 'radius'
 end
 
-platforms :mri_18 do
+platforms :mri_18, :mri_19 do
   # bundler platforms are broken
-  next if RUBY_ENGINE != 'ruby' or RUBY_VERSION > "1.8"
+  next if RUBY_ENGINE != 'ruby'
   gem 'rcov', :group => 'rcov'
 end
